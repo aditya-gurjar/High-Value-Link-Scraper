@@ -1,0 +1,4 @@
+scraper_env/
+.env
+*.db
+logs/

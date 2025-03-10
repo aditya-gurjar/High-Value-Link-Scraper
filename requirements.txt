@@ -1,0 +1,7 @@
+firecrawl-py
+openai
+fastapi
+uvicorn
+sqlalchemy
+pydantic
+python-dotenv

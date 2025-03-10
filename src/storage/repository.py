@@ -141,7 +141,7 @@ class LinkRepository:
                 
         return added_links
         
-    def get_links_by_relevance(self, min_relevance: float = 0.0, limit: int = 100) -> List[Link]:
+    def get_links_by_relevance(self, min_relevance: float = 0.0, limit: int = 10) -> List[Link]:
         """
         Get links ordered by relevance
         
@@ -158,7 +158,7 @@ class LinkRepository:
             .limit(limit)\
             .all()
             
-    def get_links_by_category(self, category: str, limit: int = 100) -> List[Link]:
+    def get_links_by_category(self, category: str, limit: int = 10) -> List[Link]:
         """
         Get links by category
         
@@ -175,7 +175,7 @@ class LinkRepository:
             .limit(limit)\
             .all()
             
-    def get_links_by_website(self, website_id: int, limit: int = 100) -> List[Link]:
+    def get_links_by_website(self, website_id: int, limit: int = 10) -> List[Link]:
         """
         Get links for a specific website
         
@@ -192,7 +192,7 @@ class LinkRepository:
             .limit(limit)\
             .all()
             
-    def get_document_links(self, limit: int = 100) -> List[Link]:
+    def get_document_links(self, limit: int = 10) -> List[Link]:
         """
         Get document links
         
@@ -219,7 +219,7 @@ class LinkRepository:
             .order_by(desc(Website.last_crawled))\
             .all()
             
-    def search_links(self, query: str, limit: int = 100) -> List[Link]:
+    def search_links(self, query: str, limit: int = 10) -> List[Link]:
         """
         Search links by URL or page title
         

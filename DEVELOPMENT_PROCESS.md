@@ -92,7 +92,7 @@ To minimize OpenAI API costs while maintaining quality:
 ### Crawl Efficiency
 
 To optimize the crawling process:
-- Set reasonable page limits (default 50)
+- Set reasonable page limits (default 10)
 - Implemented proper error handling and retries
 - Used asynchronous crawling through FireCrawl
 

@@ -17,7 +17,7 @@ API_HOST = os.getenv("API_HOST", "0.0.0.0")
 API_PORT = int(os.getenv("API_PORT", "8000"))
 
 # Crawler configuration
-CRAWL_LIMIT = int(os.getenv("CRAWL_LIMIT", "50"))  # Default limit of pages to crawl
+CRAWL_LIMIT = int(os.getenv("CRAWL_LIMIT", "10"))  # Default limit of pages to crawl
 FORMATS = ["markdown", "html"]
 
 # Link prioritization

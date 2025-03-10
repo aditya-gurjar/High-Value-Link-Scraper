@@ -23,7 +23,7 @@ def ensure_directories():
     Path('logs').mkdir(exist_ok=True)
 
 
-def crawl_website(url: str, limit: int = 50):
+def crawl_website(url: str, limit: int = 10):
     """
     Crawl a website and store high-value links
     
@@ -130,7 +130,7 @@ if __name__ == "__main__":
     # Crawl command
     crawl_parser = subparsers.add_parser("crawl", help="Crawl a website")
     crawl_parser.add_argument("url", help="URL to crawl")
-    crawl_parser.add_argument("--limit", type=int, default=50, help="Maximum number of pages to crawl")
+    crawl_parser.add_argument("--limit", type=int, default=10, help="Maximum number of pages to crawl")
     
     args = parser.parse_args()
     

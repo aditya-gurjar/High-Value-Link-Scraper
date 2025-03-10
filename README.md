@@ -63,11 +63,11 @@ The system crawls websites, analyzes discovered links using a combination of heu
 To crawl a website and extract high-value links:
 
 ```
-python main.py crawl https://example.com --limit 50
+python main.py crawl https://example.com --limit 10
 ```
 
 This will:
-1. Crawl up to 50 pages on the specified website
+1. Crawl up to 10 pages on the specified website
 2. Process discovered links and assess their potential value
 3. Send promising links to OpenAI for detailed analysis
 4. Store the results in the database
@@ -125,7 +125,7 @@ The API provides several endpoints for accessing and filtering links:
 ### Get Links with Filtering
 
 ```
-GET /links?min_relevance=0.7&category=financial&limit=20
+GET /links?min_relevance=0.7&category=financial&limit=10
 ```
 
 **Parameters:**
@@ -147,7 +147,7 @@ GET /links/search?query=budget&limit=10
 ### Get Links by Website
 
 ```
-GET /links/website/1?limit=20
+GET /links/website/1?limit=10
 ```
 
 **Parameters:**
@@ -172,7 +172,7 @@ POST /crawl
 ```json
 {
   "url": "https://www.a2gov.org",
-  "limit": 50
+  "limit": 10
 }
 ```
 
